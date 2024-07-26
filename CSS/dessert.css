@@ -1,0 +1,323 @@
+@import url("reset.css");
+
+
+body {
+    font-family: "Lexend Deca", sans-serif, "Noto Sans TC", sans-serif;
+    letter-spacing: 1px;
+    color: #292929;
+}
+
+
+/* -----carousel start----- */
+
+.carousel {
+    max-width: 100%;
+    height: auto;
+}
+
+#sliderBoard {
+    /* div */
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+
+    overflow: hidden;
+}
+
+#content {
+    /* ul */
+    position: relative;
+}
+
+#content li {
+    /* li */
+    float: left;
+}
+
+/* circle button */
+#contentButton {
+    /* border: 1px solid red; */
+    text-align: center;
+    height: auto;
+}
+
+#contentButton li {
+    width: 4.5vw;
+    height: 4px;
+    background-color: #ffe2d4b5;
+    margin: 0px 8px;
+
+    display: inline-block;
+    cursor: pointer;
+}
+
+#contentButton li.clicked {
+    background-color: #ca7b61c0;
+}
+
+/* -----carousel end----- */
+
+
+.shine {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    margin: 80px 0;
+}
+
+.shine h1 {
+    color: #BDA074;
+    font-size: 2.25rem;
+    line-height: 55px;
+}
+
+/* -----商品按鈕 start-----  */
+
+.btn_dessert {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    /* border: 1px solid saddlebrown; */
+    flex-wrap: wrap;
+}
+
+.btn_dessert .category-button {
+    font-family: "Noto Sans TC";
+    width: 120px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #BDA074;
+    border-radius: 8px;
+    border: 1px solid #BDA074;
+    background: #FEFBF6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.btn_dessert .category-button:hover {
+    color: #FFE2D4;
+    background: #CA7C61;
+
+}
+
+.category-button.active{
+    color: #FFE2D4;
+    background: #CA7C61;
+}
+
+/* -----商品按鈕 end-----  */
+.sort {
+    /* border: 1px solid saddlebrown; */
+    max-width: 88%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 36px 0;
+}
+
+.sort i {
+    margin-left: 8px;
+}
+
+/* -----商品資訊start----- */
+.commodity {
+    gap: 10px;
+    text-align: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    margin: 0px auto;
+    margin-bottom: 80px;
+
+    /* width: calc(100vw - 300px); */
+    width: 1030px;
+
+}
+
+.commodity .item1 {
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+    /* width: calc((100vw - 300px - 30px) * 0.25); */
+    width: 250px;
+    height: 350px;
+}
+
+.commodity .item1:hover {
+    background-color: #fcf0ea;
+    transition: .3s;
+}
+
+.commodity .item1 a {
+    text-decoration: none;
+    color: #292929;
+    display: block;
+    overflow: hidden;
+    /*確保放大圖片不會超出範圍 */
+}
+
+.commodity .item1 img {
+    max-width: 232px;
+    max-height: 232px;
+    /* max-width: 210px;
+    max-height: 210px; */
+    object-fit: cover;
+    transition: .3s;
+    display: block;
+}
+
+.commodity .item1:hover img {
+    transform: scale(1.05);
+    /* 圖片放大 */
+}
+
+.commodity h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.commodity div span:first-of-type {
+    display: block;
+    letter-spacing: 0.4px;
+    font-size: 0.87rem;
+    margin-bottom: 20px;
+}
+
+.commodity div span:last-of-type {
+    font-size: 1.25rem;
+    color: #CA7C61;
+}
+
+.commodity p {
+    width: 70px;
+    height: 26px;
+
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+    color: #CA7C61;
+    line-height: 26px;
+
+    border-radius: 8px;
+    background: #FEFBF6;
+    /* border: 1px solid saddlebrown; */
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+/* -----商品資訊end----- */
+
+
+/* -----分頁按鈕start----- */
+
+.pagination {
+    /* border: 1px solid saddlebrown; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+
+    gap: 20px;
+}
+
+.pagination button {
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+    border: 1.5px solid #BDA074;
+    background-color: #FEFBF6;
+    color: #BDA074;
+    border-radius: 50%;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.pagination button:hover {
+    background-color: #CA7C61;
+    color: #FFE2D4;
+    border: none;
+}
+
+#Page1.active{
+    color: #FFE2D4;
+    background: #CA7C61;
+}
+
+
+/* -----分頁按鈕end----- */
+
+::selection {
+    color: #FEFBF6;
+    background-color: #CA7C61;
+}
+
+
+/*------------- RWD：1000px  -------------*/
+@media screen and (max-width: 1000px) {
+    .btn_dessert {
+        gap: 16px;
+    }
+
+    .btn_dessert .category-button {
+        width: 109px;
+        height: 36px;
+        line-height: 36px;
+    }
+
+
+    .commodity {
+        width: 770px;
+    }
+}
+
+/*------------- RWD：770px  -------------*/
+@media screen and (max-width: 770px) {
+    .commodity {
+        width: 510px;
+    }
+}
+
+/*------------- RWD：510px  -------------*/
+@media screen and (max-width: 510px) {
+    .shine {
+        gap: 10px;
+        margin: 60px 0;
+    }
+
+    .shine h1 {
+        font-size: 30px;
+    }
+
+    .btn_dessert {
+        gap: 18px;
+    }
+
+    .btn_dessert a {
+        width: 90px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px;
+    }
+
+    .commodity {
+        width: 250px;
+    }
+
+}

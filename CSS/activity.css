@@ -1,0 +1,629 @@
+@import url('reset.css');
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Lexend Deca", "Lato", "Quicksand", "Noto Sans TC", sans-serif;
+    letter-spacing: 1px;
+    color: #292929;
+    overflow-x: hidden;
+}
+
+/* -----lovebanner start----- */
+.activity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.lovebanner>img {
+    max-width: 100%;
+    object-fit: cover;
+    position: fixed;
+    position: relative;
+}
+
+
+.lovebanner .lovetext {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.dialog img:first-child {
+    position: absolute;
+
+    /* top: 235px;
+    right: 650px; */
+    top: 35%;
+    right: 45%;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+
+    animation: d1 1s .5s linear forwards;
+}
+
+@keyframes d1 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.dialog img:nth-child(2) {
+    position: absolute;
+
+    /* top: 235px; */
+    top: 35%;
+    right: 0;
+    /* left: 750px; */
+    left: 45%;
+    margin: auto;
+
+    opacity: 0;
+    animation: d2 1s 1.5s linear forwards;
+}
+
+@keyframes d2 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.dialog img:nth-child(3) {
+    position: absolute;
+
+    /* top: 335px; */
+    top: 55%;
+    /* right: 750px; */
+    right: 55%;
+    left: 0;
+    margin: auto;
+
+    opacity: 0;
+    animation: d3 1s 2.5s linear forwards;
+}
+
+@keyframes d3 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.dialog img:last-child {
+    position: absolute;
+
+    /* top: 335px; */
+    top: 55%;
+    right: 0;
+    left: 60%;
+    /* left: 750px; */
+    margin: auto;
+
+    opacity: 0;
+    animation: d4 1s 3.5s linear forwards;
+}
+
+@keyframes d4 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.phone-lovebanner,
+.typebanner {
+    display: none;
+}
+
+
+/* -----lovebanner end----- */
+
+/* -----禮盒資訊 start----- */
+
+.heart {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.heart h1 {
+    color: #CA7C61;
+    font-size: 2.25rem;
+    line-height: 55px;
+}
+
+/* -------光暈特效 start------- */
+
+.glow_container {
+    position: relative;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(#A18CD1, #FAD0C4);
+    animation: glow 3s linear infinite;
+}
+
+.glow:nth-child(1) {
+    filter: blur(10px);
+}
+
+.glow:nth-child(2) {
+    filter: blur(20px);
+}
+
+.glow:nth-child(3) {
+    filter: blur(25px);
+}
+
+.glow:nth-child(4) {
+    filter: blur(50px);
+}
+
+.giftimg_wrapper {
+    position: relative;
+    max-width: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.giftimg_wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+@keyframes glow {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* -------光暈特效 end------- */
+
+.gifrbox_container {
+    margin-bottom: 80px;
+}
+
+.gifrbox_container>p {
+    font-size: 1.5rem;
+    line-height: 48px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.gift {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.gift_price h3 {
+    color: #CA7C61;
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.gift_price span {
+    line-height: 48px;
+}
+
+.gift_price h3 {
+    display: inline;
+}
+
+.gift_price span {
+    display: inline;
+}
+
+.gift_price p {
+    font-size: 1.25rem;
+    line-height: 48px;
+    margin: 40px 0;
+}
+
+.gift input[type="button"] {
+    font-family: "Noto Sans TC";
+    width: 153px;
+    height: 46px;
+    font-size: 1.25rem;
+    border: 1.5px solid #BDA074;
+    background-color: #FEFBF6;
+    color: #BDA074;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.gift input[type="button"]:hover {
+    background-color: #CA7C61;
+    color: #FFE2D4;
+    border: 0;
+}
+
+.gift_text {
+    width: 880px;
+    margin: 0 auto;
+    max-width: 85%;
+}
+
+.gift_text span {
+    font-size: 28px;
+    font-weight: 500;
+    color: #BDA074;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.gift_text p {
+    font-size: 1.25rem;
+    line-height: 48px;
+
+    margin-bottom: 60px;
+}
+
+/* -----禮盒資訊 end-----  */
+
+.lovetext p {
+    max-width: 80%;
+
+    font-size: 28px;
+    font-family: "Kalnia Glaze", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 2;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    background-clip: text;
+    color:transparent;
+    
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Product Description start */
+
+.product_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.product_container .product:last-child {
+    margin-bottom: 80px;
+}
+
+
+.product {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    /* width: 990px; */
+    width: 80%;
+    position: relative;
+    opacity: 0;
+    transition: 0.5s;
+    right: 100px;
+
+}
+
+.product.visible {
+    opacity: 1;
+    right: 0;
+
+}
+
+
+.product p {
+    font-size: 1.25rem;
+    line-height: 36px;
+}
+
+.product div span {
+    display: block;
+}
+
+/*-----整體固定樣式-----*/
+
+.coco_text,
+.straw_text,
+.matcha_text,
+.honey_text,
+.snow_text {
+    max-width: 100%;
+    /* width: 665px; */
+}
+
+.coco_text span:first-of-type,
+.straw_text span:first-of-type,
+.matcha_text span:first-of-type,
+.honey_text span:first-of-type,
+.snow_text span:first-of-type {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.coco_text span:nth-of-type(2),
+.straw_text span:nth-of-type(2),
+.matcha_text span:nth-of-type(2),
+.honey_text span:nth-of-type(2),
+.snow_text span:nth-of-type(2) {
+    font-size: 1.12rem;
+    margin: 16px 0;
+}
+
+
+/*-----杏仁黑巧餅乾棒-----*/
+.coco_text span {
+    color: #593F3B;
+}
+
+/* -----草莓白巧餅乾棒----- */
+
+.straw_text span {
+    color: #CA7C61;
+}
+
+/* -----杏仁抹茶白巧餅乾棒----- */
+
+.matcha_text span {
+    color: #85987D;
+}
+
+/* -----蜂蜜瑪德蓮----- */
+.honey_text span {
+    color: #BDA074;
+}
+
+/* -----草莓雪Q餅----- */
+.snow_text span {
+    color: #CA7C61;
+}
+
+/* Product Description end */
+
+::selection {
+    color: #FEFBF6;
+    background-color: #CA7C61;
+}
+
+/*------------ RWD:1120px ------------*/
+@media screen and (max-width: 1120px) {
+    .dialog img:first-child {
+        top: 30%;
+        right: 48%;
+    }
+
+    .dialog img:nth-child(2) {
+        top: 38%;
+        left: 50%;
+    }
+
+    .dialog img:nth-child(3) {
+        top: 48%;
+        right: 56%;
+    }
+
+    .dialog img:last-child {
+        top: 56%;
+        left: 62%;
+    }
+
+}
+
+/*------------ RWD:1000px ------------*/
+@media screen and (max-width: 1000px) {
+    .lovebanner img {
+        display: none;
+    }
+
+    .phone-lovebanner {
+        display: block;
+    }
+
+    .phone-lovebanner img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .product {
+        gap: 30px;
+    }
+}
+
+/*------------ RWD:960px ------------*/
+@media screen and (max-width: 960px) {
+
+    .gift {
+        flex-direction: column;
+    }
+
+    .gift_price {
+        text-align: center;
+    }
+
+    .gifrbox_container>p {
+        font-size: 22px;
+    }
+
+    .product {
+        flex-direction: column;
+    }
+
+    .product img {
+        order: 1;
+    }
+
+    .product .coco_text,
+    .product .straw_text,
+    .product .matcha_text,
+    .product .honey_text,
+    .product .snow_text {
+        order: 2;
+
+        text-align: center;
+    }
+
+    .product p {
+        text-align: justify;
+    }
+
+    .coco_text span:nth-of-type(2),
+    .straw_text span:nth-of-type(2),
+    .matcha_text span:nth-of-type(2),
+    .honey_text span:nth-of-type(2),
+    .snow_text span:nth-of-type(2) {
+        margin: 20px 0;
+    }
+
+}
+
+/*------------ RWD:610px ------------*/
+@media screen and (max-width: 610px) {
+    .phone-lovebanner {
+        display: none;
+    }
+
+    .typebanner {
+        display: block;
+    }
+
+    .typebanner img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .heart {
+        gap: 10px;
+        margin: 40px 0;
+    }
+
+    .heart h1 {
+        font-size: 30px;
+    }
+
+    .gifrbox_container>p {
+        font-size: 20px;
+    }
+
+}
+
+/*------------ RWD:440px ------------*/
+@media screen and (max-width: 440px) {
+
+    .heart h1 {
+        font-size: 27px;
+    }
+
+    .gifrbox_container>p {
+        font-size: 18px;
+    }
+
+    .glow_container {
+        max-width: 280px;
+    }
+
+    .gift_price {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gift_price p,
+    .product p {
+        font-size: 18px;
+    }
+
+    .gift_text span {
+        font-size: 24px;
+    }
+
+    .gift_text p {
+        font-size: 18px;
+        margin-bottom: 54px;
+    }
+
+    .coco_text span:nth-of-type(2),
+    .straw_text span:nth-of-type(2),
+    .matcha_text span:nth-of-type(2),
+    .honey_text span:nth-of-type(2),
+    .snow_text span:nth-of-type(2) {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}

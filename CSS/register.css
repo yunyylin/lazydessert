@@ -1,0 +1,136 @@
+@import url('reset.css');
+
+body {
+    font-family: "Lexend Deca", "Lato", "Quicksand", "Noto Sans TC", sans-serif;
+    letter-spacing: 1px;
+    color: #292929;
+}
+
+::selection {
+    color: #FEFBF6;
+    background-color: #CA7C61;
+}
+
+
+.shine {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.shine h1 {
+    color: #BDA074;
+    font-size: 2.25rem;
+    /*36px*/
+    line-height: 55px;
+}
+
+/* ------會員註冊開始------ */
+
+main {
+    /* border: 2px solid skyblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+form h5 {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+form div:nth-child(2n) {
+    margin: 30px 0;
+}
+
+
+form div:nth-of-type(5) {
+    justify-content: start;
+    height: 50px;
+    gap: 54px;
+}
+
+input::placeholder {
+    color: #C7C7C7;
+}
+
+form .fa-solid {
+    font-size: 1.5rem;
+    color: #BDA074;
+}
+
+form .fas {
+    font-size: 2rem;
+    color: #BDA074;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"] {
+    width: 260px;
+    height: 18px;
+    border: none;
+    padding: 10px 0 10px 10px;
+}
+
+form input[type="date"] {
+    padding: 10px;
+}
+
+form div:nth-of-type(1),
+form div:nth-of-type(2),
+form div:nth-of-type(3),
+form div:nth-of-type(4),
+form div:nth-of-type(6) {
+    width: 300px;
+    height: 30px;
+    border: none;
+    padding: 10px 0 10px 10px;
+
+    border: 1px solid #BDA074;
+    border-radius: 8px;
+}
+
+form input[type="submit"] {
+    color: white;
+    font-size: 1rem;
+    width: 100px;
+    height: 35px;
+    border: #BDA074;
+    border-radius: 8px;
+    background-color: #BDA074;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    font-family: "Noto Sans TC"
+}
+
+
+form input[type="submit"]:hover {
+    background-color: #CA7C61;
+}
+
+/* ------會員註冊結束------ */
+
+@media screen and (max-width: 430px) {
+    .shine {
+        gap: 10px;
+        margin: 40px 0;
+    }
+
+    .shine h1 {
+        font-size: 30px;
+    }
+}

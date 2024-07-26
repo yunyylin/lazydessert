@@ -1,0 +1,120 @@
+@import url('reset.css');
+
+body {
+    font-family: "Lexend Deca", sans-serif, "Noto Sans TC", sans-serif;
+    letter-spacing: 1px;
+    color: #292929;
+}
+
+.footer_container {
+    display: flex;
+    flex-direction: column;
+    background-color: #FEFBF6;
+    color: #BDA074;
+}
+
+.footer {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+
+}
+
+.footer img {
+    width: 184px;
+    height: 32px;
+}
+
+.footer p {
+    color: #BDA074;
+    font-size: 15px;
+    line-height: 2;
+    margin-top: -10px;
+}
+
+
+.footer_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer_nav a {
+    display: inline-block;
+    font-size: 1rem;
+
+    color: #BDA074;
+    text-decoration: none;
+}
+
+.footer_icon {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+}
+
+.footer a .fa-brands {
+    color: #BDA074;
+    font-size: 2.25rem;
+}
+
+.footer_learn {
+    padding: 20px;
+    color: #292929;
+    font-size: 0.75rem;
+}
+
+.footer a .fa-brands:hover {
+    color: #CA7C61;
+    font-size: 2.25rem;
+}
+
+.footer_nav a:hover {
+    color: #CA7C61;
+}
+
+::selection {
+    color: #FEFBF6;
+    background-color: #CA7C61;
+}
+
+
+@media screen and (max-width: 970px) {
+    .footer_nav {
+        display: none;
+    }
+}
+
+
+/* ---------- RWD 880px ---------- */
+@media screen and (max-width: 880px) {
+    .footer {
+        /* border: 1px solid saddlebrown; */
+        padding: 30px 30px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer_nav {
+        display: none;
+    }
+
+    .footer p {
+        font-size: 0.75rem;
+        color: #BDA074;
+    }
+
+    .footer a .fa-brands {
+        font-size: 2rem;
+    }
+
+    .footer_learn p {
+        margin-top: 30px;
+        font-size: 0.62rem;
+        line-height: 1.5;
+    }
+}

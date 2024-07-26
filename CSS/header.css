@@ -1,0 +1,230 @@
+@import url("reset.css");
+
+/* 基本樣式 */
+body {
+    font-family: "Lexend Deca", sans-serif, "Noto Sans TC", sans-serif;
+    letter-spacing: 1px;
+    color: #292929;
+}
+
+.out {
+    /* border: 1px solid gray; */
+    background: #FEFBF6;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+}
+
+/* ----------主選單外層---------- */
+.top {
+    /* border: 1px solid red; */
+    display: flex;
+    max-width: 100%px;
+    margin: 0 auto;
+    /*讓整個nav置中*/
+
+    /* 讓logo水平置中  */
+    align-items: center;
+    padding: 16px 28px;
+}
+
+/* ----------LOGO---------- */
+.top>a>img {
+    max-width:150px;
+    /* width: 186px;
+    height: 34px; */
+}
+
+/* ----------主選單---------- */
+.main-sel {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.main-sel li {
+    flex-grow: 1;
+    width: 85px;
+    display: block;
+    text-align: center;
+    padding: 0px 10px;
+}
+
+.main-sel li a {
+    color: #BDA074;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.main-sel li a span {
+    display: none;
+    position: relative;
+}
+
+.main-sel li a span::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background-color: #CA7C61;
+}
+
+.main-sel li a:hover span {
+    color: #CA7C61;
+    display: block;
+}
+
+.main-sel li a:hover span::after {
+    width: 100%;
+}
+
+.main-sel li a:hover h5 {
+    display: none;
+}
+
+/* ----------主選單icon---------- */
+
+.main-sel-icon {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-sel-icon li {
+    gap: 20px;
+}
+
+.main-sel-icon a {
+    font-size: 1.3rem;
+    color: #BDA074;
+}
+
+.main-sel-icon a:hover {
+    color: #CA7C61;
+}
+
+/* ----------漢堡選單樣式---------- */
+.wrap {
+    display: none; /* 預設隱藏 */
+    position: relative;
+    z-index: 10;
+}
+
+.btn-box {
+    /* border: 1px solid gray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.btn-box .btn {
+    position: relative;
+    width: 23px;
+    height: 2.2px;
+    background-color: #BDA074;
+}
+
+.btn-box .btn::before,
+.btn-box .btn::after {
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 2.2px;
+    background-color: #BDA074;
+    transition: transform 0.3s, top 0.3s, opacity 0.3s;
+}
+
+.btn-box .btn::before {
+    top: -10px;
+}
+
+.btn-box .btn::after {
+    top: 10px;
+}
+
+/* ----------選單右側滑出---------- */
+.main-sel {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    transition: transform 0.5s ease;
+
+}
+
+.main-sel.active {
+    transform: translateX(-100%);
+    height: 100%;
+}
+
+/* ---------- RWD 1000px ---------- */
+@media screen and (max-width: 1000px) {
+    .wrap {
+        display: flex;
+    }
+
+    .main-sel {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(254, 251, 246, .8);
+
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
+        z-index: 10;
+        box-sizing: border-box;
+    }
+
+    .main-sel li {
+        /* border-top: 0.5px solid gray; */
+        /* background-color: #ddd; */
+        width: 100%;
+        display: grid;
+        align-items: center;
+    }
+
+    .main-sel li a {
+        display: block;
+        text-align: center;
+        padding: 30px 0;
+        color: #BDA074;
+        font-size: 1rem;
+
+    }
+
+    .main-sel.active {
+        transform: translateX(0);
+        height: 93%;
+    }
+
+    .main-sel-icon {
+        margin-left: auto;
+    }
+
+    .btn-box.active .btn {
+        background-color: transparent;
+    }
+
+    .btn-box.active .btn::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .btn-box.active .btn::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+}
+
+/* ---------- RWD 430px ---------- */

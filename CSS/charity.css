@@ -1,0 +1,446 @@
+@import url('reset.css');
+
+html {
+    font-size: 16px;
+    /* 1rem = 16px */
+}
+
+body {
+    font-family: "Lexend Deca", sans-serif, "Noto Sans TC", sans-serif;
+    letter-spacing: 1px;
+    color: #292929;
+}
+
+.wrapper {
+    /* margin: 0 auto; */
+}
+
+/* -----banner start----- */
+.banner_container {
+    position: relative;
+}
+
+.banner_container>img {
+    width: 100%;
+    max-width: 1440px;
+}
+
+.joinus img {
+    max-width: 200px;
+    max-height: 160px;
+
+    position: absolute;
+
+    top: -230px;
+    bottom: 0;
+    left: -76px;
+    right: 0;
+    margin: auto;
+
+    animation: heart 3s infinite;
+    cursor: pointer;
+}
+
+@keyframes heart {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-40px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* -----banner end----- */
+
+/* -----about this plan start----- */
+.about {
+    margin-top: 80px;
+}
+
+.shine {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.shine h1 {
+    color: #BDA074;
+    font-size: 2.25rem;
+    /*36px*/
+    line-height: 55px;
+}
+
+.about,
+.actions {
+    /* border: 2px solid sandybrown; */
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.about_text p,
+.actions p {
+    /* border: 2px solid teal; */
+    text-align: left;
+    font-size: 1.25rem;
+    line-height: 50px;
+    margin-top: 28px;
+}
+
+.about>img {
+    /* border: 2px solid teal; */
+    max-width: 360px;
+}
+
+.actions>img {
+    /* border: 2px solid teal; */
+    max-width: 400px;
+}
+
+/* -----about this plan end----- */
+
+/* -----受益人數 start----- */
+
+.people_wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 80px auto;
+}
+
+.container {
+    width: 28vmin;
+    height: 28vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em 0;
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid #BDA074;
+    background: #FEFBF6;
+    border-bottom: 10px solid #BDA074;
+}
+
+.fa-hand-holding-heart,
+.fa-thumbs-up,
+.fa-handshake-angle {
+    color: #BDA074;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+span.num {
+    color: #CA7C61;
+    display: grid;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+span.text {
+    text-align: center;
+}
+
+/* -----受益人數 end----- */
+
+/* -----How to Support start----- */
+
+.support_container h1 {
+    font-size: 2.25rem;
+    color: #BDA074;
+    text-align: center;
+}
+
+.support {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+.support_icon img {
+    max-width: 240px;
+}
+
+.support_icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+}
+
+/* -----How to Support end----- */
+
+/* -----方案選擇開始------  */
+
+
+/* -----方案A----- */
+
+.plan_container {
+    /* border: 2px solid indianred; */
+    max-width: 1122px;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 160px;
+    margin-bottom: 80px;
+}
+
+.plan h3 {
+    font-size: 2.25rem;
+    color: #CA7C61;
+    margin: 0 40px;
+}
+
+.plan p {
+    line-height: 40px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin: 40px 40px 0;
+}
+
+.red-text {
+    color: #CA7C61;
+}
+
+.plan_item {
+    /* border: 2px solid indianred; */
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    position: relative;
+
+}
+
+.plan_item::before {
+    content: '';
+    position: absolute;
+    top: 460px;
+    left: 32px;
+    width: 1050px;
+    height: 2px;
+    background-color: #BDA074;
+}
+
+
+.plan_item .box {
+    max-width: 360px;
+}
+
+.plan_item_text {
+    /* border: 2px solid indianred; */
+}
+
+.plan_item_text p {
+    border: 2px solid #BDA074;
+    border-radius: 40px;
+    background: #FEFBF6;
+    padding: 20px 40px;
+    font-size: 1.25rem;
+    line-height: 40px;
+    margin-bottom: 60px;
+}
+
+/* ----------按鈕---------- */
+.btn_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.quantity,
+.planc_quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    /* border: 1px solid #FFE2D4; */
+    border-radius: 50px;
+    background-color: #ffe2d45d;
+    text-align: center;
+}
+
+
+.quantity input[type="button"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+
+    border: 1px solid #FFE2D4;
+    border-radius: 50%;
+    background-color: #ffe2d4b1;
+    font-size: 1.5rem;
+    color: #CA7C61;
+    cursor: pointer;
+}
+
+.quantity input[type="text"] {
+    border: 1.5px solid #BDA074;
+    color: #292929;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    font-size: 1.12rem;
+    width: 80px;
+    height: 35.3px;
+}
+
+.counter {
+    margin: 0 20px;
+    font-size: 1.2rem;
+}
+
+.quantity input[type="button"]:hover {
+    background-color: #CA7C61;
+    color: white;
+}
+
+.purchase {
+    margin-left: 40px;
+}
+
+.purchase input[type="button"] {
+    width: 120px;
+    height: 40px;
+    background-color: #FEFBF6;
+    color: #BDA074;
+    border: 1px solid #BDA074;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Noto Sans TC";
+    font-weight: 500;
+}
+
+.purchase input[type="button"]:hover {
+    text-align: center;
+    background-color: #CA7C61;
+    color: #FFE2D4;
+    border: none;
+
+}
+
+
+/* -----方案B----- */
+
+.baga,
+.bagb {
+    /* border: 1.5px solid #BDA074; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.baga img,
+.bagb img {
+    max-width: 360px;
+    border-radius: 150px;
+    margin-bottom: 24px;
+    display: flex;
+
+    transition: transform 0.3s ease;
+}
+
+.baga img:hover,
+.bagb img:hover {
+    transform: scale(1.1)
+}
+
+/* -----方案C----- */
+
+.mark_container {
+    /* border: 1.5px solid orange; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 60px;
+    /* margin-bottom: 80px; */
+
+}
+
+.marka,
+.markb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.marka img,
+.markb img {
+    max-width: 360px;
+    border-radius: 40px;
+}
+
+.marka_detail,
+.markb_detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.marka_detail img,
+.markb_detail img {
+    margin-bottom: 30px;
+}
+
+.body-svg {
+    max-width: 200px;
+}
+
+label {
+    cursor: pointer;
+}
+
+/* -----方案選擇結束------  */
+
+/* -----charity slogan start----- */
+
+
+.slogan {
+    background-image: url('../img/charity slogan.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 80px;
+    padding: 70px;
+}
+
+.slogan p {
+    text-align: center;
+    color: #CA7C61;
+    font-weight: 500;
+}
+
+/* -----charity slogan end----- */

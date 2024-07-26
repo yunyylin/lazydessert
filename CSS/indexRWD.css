@@ -1,0 +1,270 @@
+/* ---------- RWD 1000px ---------- */
+
+@media screen and (max-width: 1000px) {
+    .welcometext {
+        padding-left: 60px;
+    }
+
+    .below img {
+        display: block;
+    }
+
+    .popular ul {
+        gap: 60px;
+
+    }
+
+    .popular #madeleine_item {
+        margin-left: 60px;
+    }
+
+    .popular #cookie_item {
+        display: none;
+        margin-right: 50px;
+    }
+
+}
+
+/* ---------- RWD 880px ---------- */
+@media screen and (max-width: 880px) {
+    .welcome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: 2px solid rebeccapurple; */
+    }
+
+    .welcometext {
+        padding-left: 0;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .welcometext p {
+        font-size: 1.25rem;
+        line-height: 50px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .below img {
+        margin: 0 auto;
+    }
+
+    .rotate img {
+        max-width: 130px;
+    }
+
+    .popular ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .chevron-container {
+        gap: 0px;
+    }
+
+    .popular #madeleine_item::after,
+    .popular #canele_item::after,
+    .popular #poundcake_item::after,
+    .popular #cookie_item::before,
+    .popular .chevron-container .fa-solid {
+        display: none;
+
+    }
+
+    .popular #cookie_item {
+        display: block;
+    }
+
+    .popular a span {
+        font-size: 1rem;
+    }
+
+    .enjoy ul {
+        gap: 20px;
+    }
+
+    .enjoy li .circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    @keyframes arrow {
+        0% {
+            transform: scale(1);
+            left: 200px;
+        }
+    
+        50% {
+            transform: scale(1);
+            left: 100px;
+        }
+    
+        100% {
+            transform: scale(1);
+            left: 100px;
+        }
+    }
+
+    .enjoy li .fa-cookie,
+    .enjoy li .fa-cookie-bite {
+        left: 25%;
+        top: 25%;
+    }
+
+
+    .news_container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .news_more h1 {
+        display: none;
+    }
+
+    .news_container .newsa {
+        /* border: 1px solid blueviolet; */
+        display: block;
+        text-align: center;
+    }
+
+    .news_text h5 {
+        margin-top: 20px;
+    }
+
+    .news_text h3 {
+        margin-bottom: 40px;
+    }
+
+    .news_text p {
+        font-size: 1.2rem;
+        width: auto;
+    }
+
+}
+
+
+/* ---------- RWD 620px ---------- */
+@media screen and (max-width: 620px) {
+
+    .banner_text h1 {
+        font-size: 6.5vw;
+    }
+
+    .banner_text p {
+        font-size: 3.25vw;
+    }
+
+    .welcometext h1 {
+        font-size: 2rem;
+    }
+
+    .welcometext p {
+        font-size: 1.2rem;
+        margin-bottom: 60px;
+    }
+
+    .rotate img {
+        opacity: 0;
+    }
+
+    .enjoy ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .enjoy li {
+        margin-bottom: 20px;
+    }
+
+    .enjoy li:nth-of-type(3) {
+        margin-bottom: 60px;
+    }
+
+    .news_text h5 {
+        font-size: 1.2rem;
+    }
+
+    .news_text h3 {
+        font-size: 1.5rem;
+    }
+
+    .news_text p {
+        font-size: 1rem;
+    }
+}
+
+/* ---------- RWD 480px ---------- */
+@media screen and (max-width: 480px) {
+    .banner_text {
+        top: 25vw;
+    }
+
+    .below img {
+        max-width: 80%;
+    }
+
+    .welcometext h1 {
+        font-size: 22px;
+    }
+
+    .welcometext p {
+        font-size: 15px;
+        line-height:40px;
+    }
+
+    .shine {
+        gap: 10px;
+    }
+
+    .shine h1 {
+        color: #BDA074;
+        font-size: 30px;
+    }
+
+    .popular ul {
+        display: block;
+        
+    }
+
+    .popular #madeleine_item {
+        margin: 0;
+    }
+
+    .popular .chevron-container .fa-chevron-right,
+    .popular .chevron-container .fa-chevron-left {
+        display: block;
+    }
+
+    .chevron-container {
+        gap: 20px;
+    }
+
+
+    .popular .chevron-container .fa-solid {
+        background-color: #FEFBF6;
+        color: #BDA074;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .popular ul {
+        width: 200px;
+        /* border: 1px solid saddlebrown; */
+    }
+
+    .popular #madeleine_item,
+    .popular #canele_item,
+    .popular #poundcake_item,
+    .popular #cookie_item{
+        margin: 0;
+    }
+}

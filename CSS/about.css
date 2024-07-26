@@ -1,0 +1,611 @@
+@import url('reset.css');
+html{
+    overflow-x: hidden; /* 禁止橫向滾動條 */
+}
+body {
+    font-family: "Lexend Deca", "Lato", "Quicksand", "Noto Sans TC", sans-serif;
+    letter-spacing: 1px;
+    color: #292929;
+    overflow-x: hidden; /* 禁止橫向滾動條 */
+}
+
+.shine {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.shine h1 {
+    color: #BDA074;
+    font-size: 2.25rem;
+    line-height: 55px;
+}
+
+/* -----about lazy start----- */
+.headwrite h2 {
+    font-family: "Meddon";
+    font-size: 2rem;
+    text-align: center;
+    color: #CA7C61;
+    line-height: 2;
+
+    margin-bottom: 60px;
+}
+
+.wrapper {
+    /* border: 1px solid saddlebrown; */
+    margin: 0 auto;
+    width: 80%;
+    /* width: 1096px; */
+    gap: 40px;
+
+}
+
+.wrapper h3 {
+    color: #bda074;
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.wrapper p {
+    font-size: 1.25rem;
+    line-height: 50px
+}
+
+.about_container div {
+    width: 55%;
+}
+
+
+.about_container {
+    display: flex;
+    /* width: 1096px; */
+    max-width: 100%;
+    gap: 40px;
+    align-items: center;
+}
+
+.about_container:nth-child(2) {
+    margin: 40px 0;
+}
+
+.about_container img {
+    /* width: 427px;
+    height: 298px; */
+    width: 100%;
+}
+
+.strawberry,
+.peach {
+    position: relative;
+    width: 100%;
+    /* max-width: 427px;
+    height: 285px; */
+    /* overflow: hidden; */
+    /*隱藏可能超出部分*/
+}
+
+.strawberry img:nth-of-type(2),
+.strawberry img:nth-of-type(3),
+.peach img:last-child {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    animation: slideAnimation 7s infinite;
+}
+
+.strawberry img:first-child,
+.peach img:first-child {
+    animation-delay: 0s;
+}
+
+.strawberry img:nth-of-type(2),
+.peach img:last-child {
+    animation-delay: 3s;
+}
+
+.strawberry img:nth-of-type(3) {
+    animation-delay: 5s;
+}
+
+@keyframes slideAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.luck video {
+    max-width: 100%;
+    /* width: 420px;
+    height: 300px; */
+}
+
+/* -----about lazy end----- */
+
+/* -----Our Promise start----- */
+
+.ourpromise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    
+    transition: opacity 0.3s linear, transform 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+    transform:translateY(-100px);
+    
+}
+
+.ourpromise.visible{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.ourpromise li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.ourpromise li img {
+    width: 75%;
+}
+
+.ourpromise li p {
+
+    font-size: 24px;
+    line-height: 1.6;
+    text-align: center;
+}
+/* -----Our Promise end----- */
+
+/* Carefully Selected Ingredients start */
+
+.ingredients_container {
+    margin: 80px 0;
+}
+
+.card-introduce p,
+.ingredients_container>p {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 60px;
+    line-height: 50px;
+}
+
+.ingredients {
+    width: 1000px;
+    height: 360px;
+
+    display: flex;
+    margin: 0 auto;
+}
+
+.ingredients li {
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+
+    transition: 1s;
+}
+
+.ingredients li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 29, 29, 0.8);
+    /*覆蓋黑色半透明*/
+    transition: .5s;
+}
+
+.ingredients li img {
+    width: 130px;
+    height: 130px;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform .5s;
+}
+
+.item1 {
+    background-image: url('../img/Ingredients-1.jpg');
+    flex-grow: 2;
+}
+
+.item2 {
+    background-image: url('../img/Ingredients-2.jpg');
+    flex-grow: 2;
+}
+
+.item3 {
+    background-image: url('../img/Ingredients-3.jpg');
+    flex-grow: 2;
+}
+
+.item4 {
+    background-image: url('../img/Ingredients-4.jpg');
+    flex-grow: 2;
+}
+
+.item5 {
+    background-image: url('../img/Ingredients-5.jpg');
+    flex-grow: 2;
+}
+
+.item6 {
+    background-image: url('../img/Ingredients-6.jpg');
+    flex-grow: 2;
+}
+
+.item7 {
+    background-image: url('../img/Ingredients-7.jpg');
+    flex-grow: 2;
+}
+
+.item8 {
+    background-image: url('../img/Ingredients-8.jpg');
+    flex-grow: 2;
+}
+
+.ingredients li:hover {
+    flex-grow: 4;
+}
+
+.ingredients li:hover img {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+.ingredients li:hover::before {
+    opacity: 0;
+    /*移除半透明*/
+}
+
+.ingredients li p {
+    opacity: 0;
+    transition: opacity .1s;
+}
+
+.ingredients li:hover p {
+    opacity: 1;
+}
+
+.text {
+    color: #FEFBF6;
+    background-color: rgba(29, 29, 29, 0.5);
+    line-height: 1.6;
+    font-weight: 500;
+    text-shadow: #292929 0.1em 0.1em 0.2em;
+    padding: 25px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Carefully Selected Ingredients end */
+
+/* -----手機版本start----- */
+
+.card-introduce span {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    animation: word 1s linear infinite;
+}
+
+@keyframes word {
+    0% {
+        transform: translateY(0px);
+        color: #FFAFBD;
+    }
+
+    50% {
+        transform: translateY(-20px);
+
+        color: #CA7C61;
+    }
+
+    100% {
+        transform: translateY(0px);
+        color: #FFAFBD;
+    }
+}
+
+.card-container {
+    /* border: 1px solid teal; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 20px;
+    display: none;
+    margin-bottom: 80px;
+
+}
+
+.card-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* border: 1px solid red; */
+
+    transition: opacity 0.5s linear, transform 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+    transform:scale(1.1);
+    
+}
+
+.card-detail.visible{
+    opacity: 1;
+    visibility: visible;
+    transform:scale(1);
+}
+
+/* 調整每一對的順序 */
+.card-detail:nth-child(2n+1) .card {
+    order: 1;
+}
+
+.card-detail:nth-child(2n+1) .card-text {
+    order: 2;
+}
+
+.card-detail:nth-child(2n) .card {
+    order: 2;
+}
+
+.card-detail:nth-child(2n) .card-text {
+    order: 1;
+}
+
+.card {
+    position: relative;
+    width: 180px;
+    height: 252px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s linear;
+    cursor: pointer;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+}
+
+.card-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFAFBD;
+    background: -webkit-linear-gradient(to bottom, #ffc3a0, #FFAFBD);
+    background: linear-gradient(to bottom, #ffc3a0, #FFAFBD);
+}
+
+.card-front img {
+    width: 70%;
+}
+
+.card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #BDA074;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+
+.card-text p {
+    font-size: 18px;
+    line-height: 40px;
+    margin-top: 20px;
+    text-align: justify;
+    width: 450px;
+}
+
+.card-introduce {
+    display: none;
+}
+
+/* -----手機版本end----- */
+
+/* ----------- RWD:1024px ---------------- */
+
+@media screen and (max-width: 1024px) {
+
+    .wrapper h3 {
+        /* 1.1倍 */
+        font-size: 25px;
+        margin-bottom: 14.5px;
+    }
+
+    .wrapper p {
+
+        font-size: 18px;
+        line-height: 40px;
+        /* 1.25倍數 */
+    }
+
+
+    .ourpromise li p {
+        font-size: 22px;
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+
+    .ingredients_container {
+        display: none;
+    }
+
+    .card-container,
+    .card-introduce {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 860px) {
+
+    .headwrite h2 {
+        font-size: 27px;
+    }
+
+    .wrapper h3 {
+        /* 1.2倍 */
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .wrapper p {
+        /* 1.2倍 */
+        font-size: 15px;
+    }
+
+    .ourpromise li p {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 670px) {
+
+    .about_container {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about_container div {
+        width: 90%;
+    }
+
+    .strawberry {
+        order: 0;
+    }
+
+    .about_container div:nth-of-type(1) {
+        order: 1;
+    }
+
+    .luck video {
+        order: 2;
+    }
+
+    .wrapper div:nth-of-type(2) div {
+        order: 3;
+    }
+
+    .ourpromise {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .ourpromise li img {
+        width: 70%;
+    }
+
+    .card-detail {
+        margin-top: 30px;
+    }
+
+    .card-detail:nth-child(2n+1) .card {
+        order: 0;
+    }
+
+    .card-detail:nth-child(2n+1) .card-text {
+        order: 0;
+    }
+
+    .card-detail:nth-child(2n) .card {
+        order: 0;
+    }
+
+    .card-detail:nth-child(2n) .card-text {
+        order: 0;
+    }
+
+    .card-text p {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .card-introduce p{
+       font-size: 18px;
+       line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .shine {
+    gap: 10px;
+    margin: 40px 0;
+    }
+    
+    .shine h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .shine {
+    gap: 9px;
+    }
+    
+    .shine h1 {
+        font-size: 27px;
+    }
+}
