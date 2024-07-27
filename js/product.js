@@ -62,3 +62,20 @@ $(document).ready(function(){
         $('.category-button').removeClass('active');
     }
 });
+
+//button
+$(function(){
+    $('.add').click(function(){
+        let $counter = $(this).closest('.quantity').find('.counter');
+        let currentValue = parseInt($counter.text());
+        $counter.text(currentValue + 1);
+    });
+
+    $('.sub').click(function(){
+        let $counter = $(this).closest('.quantity').find('.counter');
+        let currentValue = parseInt($counter.text());
+        if (currentValue > 1) {
+            $counter.text(currentValue - 1);
+        }
+    });
+});

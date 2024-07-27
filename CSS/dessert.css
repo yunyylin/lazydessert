@@ -101,12 +101,14 @@ body {
 }
 
 .btn_dessert .category-button:hover {
+
     color: #FFE2D4;
     background: #CA7C61;
 
 }
 
-.category-button.active{
+.category-button.active {
+    border: 0;
     color: #FFE2D4;
     background: #CA7C61;
 }
@@ -255,7 +257,7 @@ body {
     border: none;
 }
 
-#Page1.active{
+#Page1.active {
     color: #FFE2D4;
     background: #CA7C61;
 }

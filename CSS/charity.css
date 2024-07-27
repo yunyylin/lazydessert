@@ -26,14 +26,13 @@ body {
 }
 
 .joinus img {
-    max-width: 200px;
-    max-height: 160px;
+    max-width: 16%;
 
     position: absolute;
 
-    top: -230px;
+    top: -30%;
     bottom: 0;
-    left: -76px;
+    left: -10%;
     right: 0;
     margin: auto;
 
@@ -83,33 +82,52 @@ body {
     line-height: 55px;
 }
 
+.phone_shine {
+    display: none;
+}
+
 .about,
 .actions {
     /* border: 2px solid sandybrown; */
     display: flex;
-    gap: 60px;
+    gap: 0px;
     justify-content: center;
     align-items: center;
+
+
     margin-top: 80px;
+
+}
+
+.about_text,
+.actions_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: 30px;
 }
 
 .about_text p,
 .actions p {
     /* border: 2px solid teal; */
-    text-align: left;
+    text-align: justify;
     font-size: 1.25rem;
     line-height: 50px;
     margin-top: 28px;
+    max-width: 90%;
 }
 
 .about>img {
     /* border: 2px solid teal; */
-    max-width: 360px;
+    max-width: 320px;
+    margin-right: 40px;
 }
 
 .actions>img {
     /* border: 2px solid teal; */
-    max-width: 400px;
+    max-width: 360px;
+    margin-left: 60px;
 }
 
 /* -----about this plan end----- */
@@ -119,13 +137,13 @@ body {
 .people_wrapper {
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 10%;
     margin: 80px auto;
 }
 
 .container {
-    width: 28vmin;
-    height: 28vmin;
+    width: 180px;
+    height: 140px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -150,7 +168,8 @@ span.num {
     display: grid;
     text-align: center;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 40px;
+    margin: 10px 0;
 }
 
 span.text {
@@ -186,6 +205,10 @@ span.text {
     gap: 26px;
 }
 
+.support span {
+    font-size: 20px;
+}
+
 /* -----How to Support end----- */
 
 /* -----方案選擇開始------  */
@@ -195,28 +218,29 @@ span.text {
 
 .plan_container {
     /* border: 2px solid indianred; */
-    max-width: 1122px;
+    /* max-width: 1122px; */
+    max-width: 90%;
     margin: 0 auto;
     margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 160px;
+    gap: 60px;
     margin-bottom: 80px;
 }
 
 .plan h3 {
     font-size: 2.25rem;
     color: #CA7C61;
-    margin: 0 40px;
+    padding-left: 40px;
 }
 
 .plan p {
     line-height: 40px;
-    font-weight: 500;
     font-size: 1.25rem;
     margin: 40px 40px 0;
+    text-align: justify;
 }
 
 .red-text {
@@ -231,22 +255,16 @@ span.text {
     align-items: center;
     margin-top: 60px;
     position: relative;
-
+    border-bottom: 1.5px solid #BDA074;
+    padding-bottom: 60px;
 }
 
-.plan_item::before {
-    content: '';
-    position: absolute;
-    top: 460px;
-    left: 32px;
-    width: 1050px;
-    height: 2px;
-    background-color: #BDA074;
+.pc {
+    gap: 40px;
 }
-
 
 .plan_item .box {
-    max-width: 360px;
+    max-width: 300px;
 }
 
 .plan_item_text {
@@ -257,8 +275,8 @@ span.text {
     border: 2px solid #BDA074;
     border-radius: 40px;
     background: #FEFBF6;
-    padding: 20px 40px;
-    font-size: 1.25rem;
+    padding: 10px 20px;
+    font-size: 18px;
     line-height: 40px;
     margin-bottom: 60px;
 }
@@ -269,6 +287,7 @@ span.text {
     align-items: center;
     justify-content: center;
     margin-top: 28px;
+    
 }
 
 .quantity,
@@ -283,7 +302,11 @@ span.text {
     background-color: #ffe2d45d;
     text-align: center;
 }
-
+.quantity button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 
 .quantity input[type="button"] {
     display: flex;
@@ -293,6 +316,7 @@ span.text {
     width: 35px;
     height: 35px;
     line-height: 35px;
+    padding: 0px;
 
     border: 1px solid #FFE2D4;
     border-radius: 50%;
@@ -300,6 +324,11 @@ span.text {
     font-size: 1.5rem;
     color: #CA7C61;
     cursor: pointer;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
 }
 
 .quantity input[type="text"] {
@@ -310,7 +339,7 @@ span.text {
     text-align: center;
     font-size: 1.12rem;
     width: 80px;
-    height: 35.3px;
+    height: 35.3px; 
 }
 
 .counter {
@@ -439,8 +468,123 @@ label {
 
 .slogan p {
     text-align: center;
+    line-height: 2;
     color: #CA7C61;
     font-weight: 500;
 }
 
+
 /* -----charity slogan end----- */
+
+@media screen and (max-width: 870px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .actions {
+        flex-direction: column-reverse;
+        margin-top: 60px;
+    }
+
+    .about>img {
+        margin-right: 0px;
+    }
+
+    .actions>img {
+        margin-left: 0px;
+    }
+
+    .about_text p,
+    .actions p,
+    .plan p,
+    .support span {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .support {
+        flex-direction: column;
+    }
+
+    .plan_item,
+    .mark_container {
+        flex-direction: column;
+    }
+
+    .plan h3 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .plan h3 {
+        font-size: 28px;
+    }
+
+    .people_wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .shine {
+        gap: 10px;
+    }
+
+    .shine h1,
+    .support_container h1 {
+        font-size: 30px;
+    }
+
+    .about>img {
+        max-width: 290px;
+    }
+
+    .actions>img {
+        max-width: 320px;
+    }
+
+
+    .plan_container,
+    .about {
+        margin-top: 60px;
+    }
+
+    .plan h3 {
+        font-size: 26px;
+        line-height: 1.4;
+
+    }
+
+    .plan_item .box {
+        max-width: 250px;
+    }
+
+    .about_text p,
+    .actions p,
+    .plan p,
+    .support span {
+        font-size: 16px;
+    }
+
+    .baga img,
+    .bagb img {
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 24px;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .web_shine {
+        display: none;
+    }
+
+    .phone_shine {
+        display: block;
+    }
+}

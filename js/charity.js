@@ -18,8 +18,33 @@ valueDisplays.forEach((valueDisplay) => {
 // --------------joinus----------------
 
 document.querySelector('.joinus').addEventListener('click', function () {
-    window.scrollTo({
-        top: '2400',
+    document.querySelector('.plan_container').scrollIntoView({
         behavior: 'smooth'
-    })
+    });
 })
+
+
+//--------------button----------------
+
+$(function(){
+    $('.add').click(function(){
+        let $counter = $(this).closest('.quantity').find('.counter');
+        let currentValue = parseInt($counter.text());
+        $counter.text(currentValue + 1);
+    });
+
+    $('.sub').click(function(){
+        let $counter = $(this).closest('.quantity').find('.counter');
+        let currentValue = parseInt($counter.text());
+        if (currentValue > 1) {
+            $counter.text(currentValue - 1);
+        }
+    });
+});
+
+$(document).ready(function() {
+    $('.purchase').on('click', function() {
+        alert('請先登入會員！');
+        window.location.href = 'login.html';
+    });
+});

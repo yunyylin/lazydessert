@@ -44,6 +44,7 @@ body {
 
 }
 .category-button.active{
+    border: 0;
     color: #FFE2D4;
     background: #CA7C61;
 }

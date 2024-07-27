@@ -20,40 +20,47 @@
 </head>
 
 <body>
-        <!-- -----header start----- -->
-    <div class="out">
+    <!-- -----header start----- -->
+    <header class="out">
         <nav class="top">
-            <a href="index.html"><img src="./img/logo.png" alt="logo">
-                <ul class="main-sel">
-                    <li><a href="activity.html">
-                            <h5>限時活動</h5><span>ACTIVITY</span>
-                        </a></li>
-                    <li><a href="about.html">
-                            <h5>關於我們</h5><span>ABOUT</span>
-                        </a></li>
-                    <li><a href="dessert.html">
-                            <h5>吃點甜甜</h5><span>DESSERT</span>
-                        </a></li>
-                    <li><a href="news.html">
-                            <h5>最新消息</h5><span>NEWS</span>
-                        </a></li>
-                    <li><a href="contact.html">
-                            <h5>聯絡我們</h5><span>CONTACT</span>
-                        </a></li>
-                    <li><a href="charity.html">
-                            <h5>公益計劃</h5><span>CHARITY</span>
-                        </a></li>
-                    <li><a href="faq.html">
-                            <h5>常見問題</h5><span>FAQ</span>
-                        </a></li>
-                </ul>
-
-                <ul class="main-sel-icon">
-                    <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="shopcart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
-                </ul>
+            <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
+            <ul class="main-sel" id="main-menu">
+                <li><a href="activity.html">
+                        <h5>限時活動</h5><span>ACTIVITY</span>
+                    </a></li>
+                <li><a href="about.html">
+                        <h5>關於我們</h5><span>ABOUT</span>
+                    </a></li>
+                <li><a href="dessert.html">
+                        <h5>吃點甜甜</h5><span>DESSERT</span>
+                    </a></li>
+                <li><a href="news.html">
+                        <h5>最新消息</h5><span>NEWS</span>
+                    </a></li>
+                <li><a href="contact.html">
+                        <h5>聯絡我們</h5><span>CONTACT</span>
+                    </a></li>
+                <li><a href="charity.html">
+                        <h5>公益計劃</h5><span>CHARITY</span>
+                    </a></li>
+                <li><a href="faq.html">
+                        <h5>常見問題</h5><span>FAQ</span>
+                    </a></li>
+            </ul>
+            <ul class="main-sel-icon">
+                <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="shopcart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li>
+                    <!-- ------漢堡選單------ -->
+                    <div class="wrap">
+                        <div id="btn" class="btn-box">
+                            <div class="btn"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </nav>
-    </div>
+    </header>
     <!-- -----header end----- -->
 
     <!-- -----結帳步驟start----- -->
@@ -75,33 +82,34 @@
 
     <!-- -----結帳步驟end----- -->
 
-
-
-
     <!-- -----已加入的商品列表開始----- -->
     <div class="container">
         <table>
-
             <tr class="shopcart">
-                <td colspan="6">購物車</td>
+                <td colspan="7">
+                    <span>購物車</span>
+                    <span>全部刪除</span>
+                    <label><span>全選<input type="checkbox" name="all" id="all"></span></label>
+                </td>
             </tr>
 
             <tr class="title">
-                <th colspan="2">商品資料</th>
+                <th colspan="3">商品資料</th>
                 <th>單件價格</th>
                 <th>數量</th>
                 <th colspan="2">小計</th>
             </tr>
 
             <tr class="list">
+                <td> <input type="checkbox" name="item" id="item"></td>
                 <td><img src="./img/cococookie.jpg" alt=""></td>
                 <td>可可奶酒花圈餅乾</td>
                 <td>NT＄110</td>
                 <td>
                     <div class="quantity">
-                        <input type="button" value="－">
+                        <input type="button" value="－" class="sub">
                         <div class="counter" id="counter">1</div>
-                        <input type="button" value="＋">
+                        <input type="button" value="＋" class="add">
                     </div>
                 </td>
                 <td>NT＄<span id="total-price"></span>110元</span></td>
@@ -109,14 +117,15 @@
             </tr>
 
             <tr class="list">
+                <td> <input type="checkbox" name="item" id="item"></td>
                 <td><img src="./img/twiningspoundcake.jpg" alt=""></td>
                 <td>唐寧伯爵磅蛋糕</td>
                 <td>NT＄65</td>
                 <td>
                     <div class="quantity">
-                        <input type="button" value="－">
+                        <input type="button" value="－" class="sub">
                         <div class="counter" id="counter">1</div>
-                        <input type="button" value="＋">
+                        <input type="button" value="＋" class="add">
                     </div>
                 </td>
                 <td>NT＄<span id="total-price"></span>65元</span></td>
@@ -126,103 +135,233 @@
         </table>
         <a href="dessert.html">繼續購物</a>
     </div>
-
-
     <!-- -----已加入的商品列表結束----- -->
 
+    <!-- -----手機版本購物車start------- -->
+    <div class="phone_container">
+        <table>
+            <tr class="shopcart">
+                <td colspan="7">
+                    <span>購物車</span>
+                    <span>全部刪除</span>
+                    <label><span>全選<input type="checkbox" name="all" id="all"></span></label>
+                </td>
+            </tr>
+            <tr class="list">
+                <td> <input type="checkbox" name="item" id="item"></td>
+                <td><img src="./img/cococookie.jpg" alt=""></td>
+                <td>可可奶酒花圈餅乾<br>
+                    <span>NT＄110</span>
+                    <div class="quantity">
+                        <input type="button" value="－" class="sub">
+                        <div class="counter" id="counter">1</div>
+                        <input type="button" value="＋" class="add">
+                    </div>
+                </td>
+                <td><i class="fa-solid fa-trash"></i></td>
+            </tr>
+
+            <tr class="list">
+                <td> <input type="checkbox" name="item" id="item"></td>
+                <td><img src="./img/twiningspoundcake.jpg" alt=""></td>
+                <td>唐寧伯爵磅蛋糕<br>
+                    <span>NT＄65</span>
+                    <div class="quantity">
+                        <input type="button" value="－" class="sub">
+                        <div class="counter" id="counter">1</div>
+                        <input type="button" value="＋" class="add">
+                    </div>
+                </td>
+                <td><i class="fa-solid fa-trash"></i></td>
+            </tr>
+        </table>
+        <a href="dessert.html">繼續購物</a>
+    </div>
+    <!-- -----手機版本購物車end------- -->
+
+    <div class="shine">
+        <img src="./img/shine.svg" alt="">
+        <h1>Other selected</h1>
+        <img src="./img/shine.svg" alt="">
+    </div>
+    <!-- -----其他推薦商品start----- -->
+
+    <div class="arrow">
+        <i class="fa-solid fa-angle-left" id="left"></i>
+        <div class="wrapper">
+            <ul class="carousel">
+                <li class="card">
+                    <!-- <a href="#"> -->
+                    <img src="./img/redoolongmadeleine.jpg" alt="">
+                    <h5>蜜香紅烏龍瑪德蓮</h5>
+                    <span>Honey Red Oolong Madeleine</span>
+                    <span>NT $60 /入</span>
+                    <!-- </a> -->
+                </li>
+
+                <li class="card">
+                    <a href="#">
+                        <img src="./img/cococookie.jpg" alt="">
+                        <h5>可可奶酒花圈餅乾</h5>
+                        <span>Baileys Chocolate Cookies</span>
+                        <span>NT $110 /10入</span>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a href="#">
+                        <img src="./img/tiramisu.jpg" alt="">
+                        <h5>奶酒提拉米蘇</h5>
+                        <span>Baileys Tiramisu</span>
+                        <span>NT $100 /片</span>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a href="#">
+                        <img src="./img/matchacanele-2.jpg" alt="">
+                        <h5>小山園抹茶可麗露</h5>
+                        <span>Matcha Canelé</span>
+                        <span>NT $90 /顆</span>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a href="#">
+                        <img src="./img/mangotart-2.jpg" alt="">
+                        <h5>芒果乳酪塔</h5>
+                        <span>Mango Cheese Tart</span>
+                        <span>NT $100 /入</span>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a href="#">
+                        <img src="./img/catcookie.jpg" alt="">
+                        <h5>貓貓奶香餅乾</h5>
+                        <span>Cat Milk Cookies</span>
+                        <span>NT $80 /10入</span>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a href="#">
+                        <img src="./img/honeymadeleine.jpg" alt="">
+                        <h5>蜂蜜甜杏瑪德蓮</h5>
+                        <span>Honey Madeleines</span>
+                        <span>NT $60 /顆</span>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a href="#">
+                        <img src="./img/brownie-2.png" alt="">
+                        <h5>可可布朗尼</h5>
+                        <span>Browine</span>
+                        <span>NT $50 /2入</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-angle-right" id="right"></i>
+    </div>
+
+    <!-- -----其他推薦商品end----- -->
+     
     <!-- -----選擇送貨及付款方式 + 訂單資訊 start----- -->
+    <div class="tote_container">
+        <div class="tote">
+            <h3>選擇送貨及付款方式</h3>
+            <span>送貨地點</span>
+            <select>
+                <option>請選擇本島或離島</option>
+                <option>臺灣</option>
+                <option>離島</option>
+            </select>
+            <span>送貨方式</span>
+            <select>
+                <option>請選擇送貨方式</option>
+                <option>黑貓常溫配送</option>
+                <option>黑貓冷凍配送</option>
+                <option>全家配送</option>
+            </select>
+            <p>＊採用黑貓常溫配送，週日不做配送，配送時間可選擇上午(9-13時)、下午(14-18時) 。黑貓宅配需1-3個工作天，提醒您要提前預留到貨時間。</p>
 
+            <span>付款方式</span>
+            <select>
+                <option>請選擇付款方式</option>
+                <option>銀行轉帳</option>
+                <option>信用卡</option>
+                <option>linepay</option>
+            </select>
+        </div>
 
-<div class="tote_container">
-    <div class="tote">
-        <h3>選擇送貨及付款方式</h3>
-        <span>送貨地點</span>
-        <select>
-            <option></option>
-            <option>臺灣</option>
-            <option>離島</option>
-        </select>
-        <span>送貨方式</span>
-        <select>
-            <option></option>
-            <option>黑貓常溫配送</option>
-            <option>黑貓冷凍配送</option>
-            <option>全家配送</option>
-        </select>
-        <p>＊採用黑貓常溫配送，週日不做配送，配送時間可選擇上午(9-13時)、下午(14-18時) 。黑貓宅配需1-3個工作天，提醒您要提前預留到貨時間。</p>
+        <div class="order">
+            <h3>訂單資訊</h3>
 
-        <span>付款方式</span>
-        <select>
-            <option></option>
-            <option>銀行轉帳</option>
-            <option>信用卡</option>
-            <option>linepay</option>
-        </select>
+            <div class="subtotal">
+                <span>小計：</span>
+                <span>NT＄175</span>
+            </div>
+            <div class="freight">
+                <span>運費：</span>
+                <span>NT＄80</span>
+            </div>
+            <div class="total">
+                <span>總金額：</span>
+                <span>NT＄255</span>
+            </div>
+
+            <span>優惠代碼：</span>
+
+            <div class="discount">
+                <input type="text">
+                <button>使用優惠</button>
+            </div>
+            <button>前往結帳</button>
+        </div>
+
     </div>
-
-    <div class="order">
-        <h3>訂單資訊</h3>
-
-        <div class="total">
-            <span>小計：</span>
-            <span>NT＄
-                <span id="total-price">175</span>
-            </span>
-        </div>
-        <div class="freight">
-            <span>運費：</span>
-            <span>NT＄
-                <span id="fare">80</span>
-            </span>
-        </div>
-
-        <span>優惠代碼：</span>
-
-        <div class="discount">
-            <input type="text">
-            <button>使用優惠</button>
-        </div>
-        <button>前往結帳</button>   
-    </div>
-    
-</div>
     <!-- -----選擇送貨及付款方式 + 訂單資訊----- -->
 
- <!-- -----footer start----- -->
- <footer class="footer">
-    <!-- <div class="footer_container"> -->
-    <div><img src="./img/logo.png" alt=""></div>
+    <!-- -----footer start----- -->
+    <footer class="footer_container">
+        <div class="footer">
+            <div><img src="./img/logo.png" alt=""></div>
 
-    <div>
-        <p> 營業時間 | 週一至週六 10：00－17：00<br>
+            <div>
+                <p> 營業時間 | 週一至週六 10：00－17：00<br>
 
-            電話 | 02-2525-5252<br>
-            信箱 | lazydessert@gmail.com<br>
-            地址 | 104台北市中山區南京東路三段219號4F
-        </p>
-    </div>
+                    電話 | 02-2525-5252<br>
+                    信箱 | lazydessert@gmail.com<br>
+                    地址 | 104台北市中山區南京東路三段219號4F
+                </p>
+            </div>
 
-    <div class="footer_nav">
-        <a href="about.html">關於我們</a>
-        <a href="dessert.html">吃點甜甜</a>
-        <a href="news.html">最新消息</a>
-        <a href="charity.html">公益活動</a>
-        <a href="contact.html">聯絡我們</a>
-    </div>
+            <div class="footer_nav">
+                <a href="about.html">關於我們</a>
+                <a href="dessert.html">吃點甜甜</a>
+                <a href="news.html">最新消息</a>
+                <a href="charity.html">公益活動</a>
+                <a href="contact.html">聯絡我們</a>
+            </div>
 
-    <div class="footer_icon">
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-    </div>
-    </div>
-</footer>
+            <div class="footer_icon">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
 
-<div class="footer_learn">
-    <p>本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用若有侵權疑慮，您可以私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理。</p>
-</div>
-<!-- -----footer end----- -->
+        <div class="footer_learn">
+            <p>本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用若有侵權疑慮，您可以私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理。</p>
+        </div>
+    </footer>
+    <!-- -----footer end----- -->
 
+    <script src="js/header.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="./js/shopcart.js"></script>
 
 </body>
 
