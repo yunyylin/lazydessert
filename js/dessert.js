@@ -70,7 +70,7 @@ $(function () { //等同於$(document).ready(function () {
 const products = [
 
   //限時特賣
-  { imgSrc: "./img/giftbox-1.jpg", name: "七夕情人節禮盒", english: "Valentine's Day gift box", price: "NT $350 / 盒", url: "product.html", tag: "七夕必買", category: "sale" },
+  { imgSrc: "./img/giftbox-1.jpg", name: "七夕情人節禮盒", english: "Valentine's Day gift box", price: "NT $350 / 盒", url: "product-1.html", tag: "七夕必買", category: "sale" },
 
   //瑪德蓮
   { imgSrc: "./img/honeymadeleine.jpg", name: "蜂蜜甜杏瑪德蓮", english: "Honey Almond Madeleine", price: "NT $55 /入", url: "product.html", category: "madeleine" },
