@@ -10,8 +10,9 @@ body {
 .out {
     /* border: 1px solid gray; */
     background: #FEFBF6;
-    position: sticky;
-    z-index: 2;
+    /* position: sticky; */
+    position: fixed;
+    z-index: 100;
     top: 0;
     width: 100%;
 }
