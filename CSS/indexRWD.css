@@ -167,8 +167,16 @@
         margin-bottom: 60px;
     }
 
+    .rotate {
+        /* border: 2px solid red; */
+        text-align: right;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-right: 0px;
+    }
+
     .rotate img {
-        opacity: 0;
+       display: none;
     }
 
     .enjoy ul {

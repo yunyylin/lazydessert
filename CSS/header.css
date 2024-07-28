@@ -7,21 +7,22 @@ body {
     color: #292929;
 }
 
-.out {
-    /* border: 1px solid gray; */
+header.out {
     background: #FEFBF6;
-    /* position: sticky; */
-    position: fixed;
-    z-index: 100;
+    /* border: 1px solid gray; */
+    position: sticky;
+    /* position: fixed; */
     top: 0;
+    z-index: 10;
     width: 100%;
+   
 }
 
 /* ----------主選單外層---------- */
 .top {
     /* border: 1px solid red; */
     display: flex;
-    max-width: 100%px;
+    max-width: 100%;
     margin: 0 auto;
     /*讓整個nav置中*/
 
@@ -227,5 +228,3 @@ body {
         top: 0;
     }
 }
-
-/* ---------- RWD 430px ---------- */

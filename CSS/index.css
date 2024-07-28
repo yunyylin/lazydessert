@@ -126,29 +126,25 @@ body {
     margin-bottom: 40px;
 }
 
-.welcometext input[type="button"] {
+/* .welcometext .about_button {
     font-family: "Lexend Deca";
     width: 153px;
     height: 46px;
     font-size: 1.25rem;
-    line-height: 24px;
     border: 1.5px solid #BDA074;
     background-color: #FEFBF6;
     color: #BDA074;
     border-radius: 20px;
-    cursor: pointer;
-    /* 改變游標 */
+    text-decoration: none;
 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    cursor: pointer;
 }
 
-.welcometext input[type="button"]:hover {
+.welcometext button:hover {
     background-color: #CA7C61;
     color: #FFE2D4;
-    border: 0;
-}
+    border: none;
+} */
 
 /* --------welcome end--------- */
 
@@ -195,7 +191,7 @@ body {
 
 .popular {
     background-color: #CA7C61;
-   padding: 40px 0 60px 0;
+    padding: 40px 0 60px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -249,8 +245,7 @@ body {
 }
 
 .popular #madeleine_item::after,
-.popular #canele_item::after
-{
+.popular #canele_item::after {
     content: '';
     position: absolute;
     right: -70px;
@@ -376,7 +371,7 @@ body {
     display: inline-block;
     margin-top: 24px;
     padding-left: 100%;
-    animation: marquee 25s linear infinite;
+    animation: marquee 60s linear infinite;
 
 }
 
@@ -389,6 +384,7 @@ body {
         transform: translate(-100%, 0);
     }
 }
+
 /*--------文字跑馬燈結束--------*/
 
 /*-----How to enjoy start-----*/
@@ -606,9 +602,9 @@ body {
     /* border: 2px solid blue; */
 }
 
-.news img{
-display: block;
-margin:  0 auto;
+.news img {
+    display: block;
+    margin: 0 auto;
 }
 
 .news_text h5 {
@@ -666,6 +662,7 @@ margin:  0 auto;
     margin-bottom: 80px;
 }
 
+.about_button input[type="button"],
 .news_button input[type="button"] {
     font-family: "Lexend Deca";
     width: 153px;
@@ -683,6 +680,7 @@ margin:  0 auto;
     appearance: none;
 }
 
+.about_button input[type="button"]:hover,
 .news_button input[type="button"]:hover {
     background-color: #CA7C61;
     color: #FFE2D4;

@@ -12,6 +12,7 @@ body {
 }
 
 .wrapper {
+    overflow: hidden;
     /* margin: 0 auto; */
 }
 
@@ -96,6 +97,7 @@ body {
 
 
     margin-top: 80px;
+    overflow-x: hidden;
 
 }
 
@@ -128,6 +130,34 @@ body {
     /* border: 2px solid teal; */
     max-width: 360px;
     margin-left: 60px;
+}
+
+/* ----- js進場動畫 -----*/
+
+.about_text p,
+.actions>img {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: 0.5s ease-in-out;
+}
+
+.about_text p.visible,
+.actions>img.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.actions p,
+.about>img {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: 0.5s ease-in-out;
+}
+
+.actions p.visible,
+.about>img.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* -----about this plan end----- */
@@ -212,8 +242,6 @@ span.text {
 /* -----How to Support end----- */
 
 /* -----方案選擇開始------  */
-
-
 /* -----方案A----- */
 
 .plan_container {
@@ -287,7 +315,7 @@ span.text {
     align-items: center;
     justify-content: center;
     margin-top: 28px;
-    
+
 }
 
 .quantity,
@@ -302,7 +330,8 @@ span.text {
     background-color: #ffe2d45d;
     text-align: center;
 }
-.quantity button{
+
+.quantity button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -339,7 +368,7 @@ span.text {
     text-align: center;
     font-size: 1.12rem;
     width: 80px;
-    height: 35.3px; 
+    height: 35.3px;
 }
 
 .counter {
@@ -454,9 +483,31 @@ label {
 
 /* -----方案選擇結束------  */
 
+/* -----方案JS------  */
+
+#planshine {
+    opacity: 0;
+    transition: .8s;
+    transform: perspective(2500px) rotateX(-80deg);
+}
+
+#planshine.visible {
+    opacity: 1;
+    transform: perspective(2500px) rotateX(0deg);
+}
+
+.plan {
+    opacity: 0;
+    transition: 1s .2s;
+    transform:translateY(-100px)
+}
+
+.plan.visible {
+    opacity: 1;
+    transform:translateY(0px)
+}
+
 /* -----charity slogan start----- */
-
-
 .slogan {
     background-image: url('../img/charity slogan.jpg');
     background-repeat: no-repeat;

@@ -17,10 +17,10 @@ $(document).ready(function () {
         //    console.log($(document).scrollTop()); //3951
         //    console.log($(window).height()); //630
 
-        $('.ourpromise').each(function (index) {
+        $('.ourpromise li').each(function (index) {
             let setThis = $(this);
             let ourpromiseTop = setThis.offset().top; // 物件和視窗頂部的距離
-            console.log('ourpromise ' + index + ' top position: ' + ourpromiseTop); // 輸出.ourpromise 元素的頂部距離
+            // console.log('ourpromise li' + index + ' top position: ' + ourpromiseTop); // 輸出.ourpromise 元素的頂部距離
             //1735
             if ($(document).scrollTop() >= (ourpromiseTop + showHeight) - $(window).height()) {
                 setThis.addClass('visible');

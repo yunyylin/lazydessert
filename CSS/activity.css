@@ -1,14 +1,9 @@
 @import url('reset.css');
 
-html {
-    overflow-x: hidden;
-}
-
 body {
     font-family: "Lexend Deca", "Lato", "Quicksand", "Noto Sans TC", sans-serif;
     letter-spacing: 1px;
     color: #292929;
-    overflow-x: hidden;
 }
 
 /* -----lovebanner start----- */
@@ -243,7 +238,7 @@ body {
     font-size: 1.5rem;
     line-height: 48px;
     text-align: center;
-    width: 80%;
+    width: 64%;
     margin: 0 auto;
     margin-bottom: 60px;
 }
@@ -317,6 +312,7 @@ body {
     line-height: 48px;
 
     margin-bottom: 60px;
+    text-align: justify;
 }
 
 /* -----禮盒資訊 end-----  */
@@ -362,6 +358,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 60px;
+
+    overflow-x: hidden;
 }
 
 .product_container .product:last-child {
@@ -377,10 +375,17 @@ body {
     /* width: 990px; */
     width: 80%;
     position: relative;
+
     opacity: 0;
     transition: 0.5s;
-    right: 100px;
+}
 
+.product:nth-child(odd){
+    right: 100px;
+}
+
+.product:nth-child(even){
+    right: -100px;
 }
 
 .product.visible {
@@ -388,7 +393,6 @@ body {
     right: 0;
 
 }
-
 
 .product p {
     font-size: 1.25rem;
