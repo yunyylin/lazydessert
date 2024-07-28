@@ -23,7 +23,9 @@ body {
     font-size: 2.25rem;
     line-height: 55px;
 }
-
+.news{
+    overflow-x: hidden;
+}
 .news_container {
     border-bottom: .5px solid #BDA074;
     display: flex;
